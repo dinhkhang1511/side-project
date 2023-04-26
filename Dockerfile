@@ -2,14 +2,14 @@ FROM richarvey/nginx-php-fpm:1.7.2
 
 WORKDIR /app
 
-RUN docker-php-ext-install bcmath mysqli pdo pdo_mysql
+# RUN docker-php-ext-install bcmath mysqli pdo pdo_mysql
 
 COPY . .
 
 # RUN composer config --no-plugins allow-plugins.php-http/discovery true
 
 # RUN /usr/local/bin/composer install
-RUN chmod -R 777 /app/storage
+# RUN chmod -R 777 /app/storage
 # CMD ["sh","-c", "php-fpm"]
 
 # Image config
