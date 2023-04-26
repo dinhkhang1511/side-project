@@ -27,6 +27,8 @@ ENV LOG_CHANNEL stderr
 COPY 00-laravel-deploy.sh /00-laravel-deploy.sh
 
 RUN chmod +x 00-laravel-deploy.sh
+
+RUN --mount=type=secret,id=_env,dst=/etc/secrets/.env cat /etc/secrets/.env
 # Allow composer to run as root
 ENV COMPOSER_ALLOW_SUPERUSER 1
 
