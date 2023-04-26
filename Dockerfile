@@ -8,7 +8,7 @@ COPY . .
 
 # RUN composer config --no-plugins allow-plugins.php-http/discovery true
 
-RUN /usr/local/bin/composer install
+# RUN /usr/local/bin/composer install
 RUN chmod -R 777 /app/storage
 # CMD ["sh","-c", "php-fpm"]
 
