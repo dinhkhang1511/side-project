@@ -24,6 +24,9 @@ ENV APP_ENV production
 ENV APP_DEBUG false
 ENV LOG_CHANNEL stderr
 
+COPY 00-laravel-deploy.sh /00-laravel-deploy.sh
+
+RUN chmod +x 00-laravel-deploy.sh
 # Allow composer to run as root
 ENV COMPOSER_ALLOW_SUPERUSER 1
 
