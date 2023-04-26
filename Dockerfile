@@ -9,7 +9,9 @@ COPY . .
 # RUN composer config --no-plugins allow-plugins.php-http/discovery true
 
 # RUN /usr/local/bin/composer install
-# RUN chmod -R 777 /app/storage
+RUN chmod -R 777 /app/storage
+RUN chmod +x 00-laravel-deploy.sh
+
 # CMD ["sh","-c", "php-fpm"]
 
 # Image config
