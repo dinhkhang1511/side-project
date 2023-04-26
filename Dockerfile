@@ -29,7 +29,7 @@ ENV LOG_CHANNEL stderr
 # Allow composer to run as root
 ENV COMPOSER_ALLOW_SUPERUSER 1
 
-COPY 00-laravel-deploy.sh /00-laravel-deploy.sh
+# COPY 00-laravel-deploy.sh /00-laravel-deploy.sh
 
-ENTRYPOINT ["/bin/bash", "-c", "echo 'Running setup commands'; /00-laravel-deploy.sh"]
+# ENTRYPOINT ["/bin/bash", "-c", "echo 'Running setup commands'; /00-laravel-deploy.sh"]
 
