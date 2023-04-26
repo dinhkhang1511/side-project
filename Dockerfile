@@ -1,4 +1,4 @@
-FROM richarvey/nginx-php-fpm:latest
+FROM richarvey/nginx-php-fpm:1.7.2
 
 WORKDIR /app
 
@@ -9,9 +9,7 @@ COPY . .
 # RUN composer config --no-plugins allow-plugins.php-http/discovery true
 
 # RUN /usr/local/bin/composer install
-RUN chmod -R 777 /app/storage
-RUN chmod +x 00-laravel-deploy.sh
-
+# RUN chmod -R 777 /app/storage
 # CMD ["sh","-c", "php-fpm"]
 
 # Image config
@@ -28,3 +26,6 @@ ENV LOG_CHANNEL stderr
 
 # Allow composer to run as root
 ENV COMPOSER_ALLOW_SUPERUSER 1
+
+CMD ["/start.sh"]
+
