@@ -17,4 +17,7 @@ ENV LOG_CHANNEL stderr
 # Allow composer to run as root
 ENV COMPOSER_ALLOW_SUPERUSER 1
 
-CMD ["/start.sh"]
+RUN php -d memory_limit=-1 /usr/local/bin/composer install
+RUN chmod -R 777 /app/storage
+
+CMD ["sh","-c", "php-fpm", "/start.sh"]
