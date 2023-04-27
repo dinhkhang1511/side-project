@@ -17,7 +17,7 @@ ENV LOG_CHANNEL stderr
 # Allow composer to run as root
 ENV COMPOSER_ALLOW_SUPERUSER 1
 
-RUN chmod -R 777 /app/storage
+# RUN chmod -R 777 /app/storage
 
 # COPY script/entrypoint.sh script/entrypoint.sh
 
