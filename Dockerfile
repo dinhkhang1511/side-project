@@ -19,6 +19,6 @@ ENV COMPOSER_ALLOW_SUPERUSER 1
 
 RUN chmod -R 777 /app/storage
 
-COPY script/entrypoint.sh script/entrypoint.sh
+# COPY script/entrypoint.sh script/entrypoint.sh
 
 ENTRYPOINT [ "script/entrypoint.sh" ]
